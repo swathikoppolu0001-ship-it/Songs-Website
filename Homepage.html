@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+
+  </head>
+  <body>
+    <style>
+        body{
+background-color: black;
+color: antiquewhite;
+font-family: sans-serif;
+
+        }
+      
+       a img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+       }
+       img{
+        margin-top: 1%;
+        margin-left: 5%;
+        
+       }
+       footer {
+       margin-top: 50px;
+       color: white;
+       font-size: 30px;
+       }
+    </style>
+    <p style="color: antiquewhite; font-size: 300%; text-align: center;color: darkgreen;text-decoration: underline; margin-top: 0%;"><b>Spotify Music</b></p>
+    <p><marquee style="background-color: rgb(23, 87, 10);color: antiquewhite; font-size: 150%; margin-top: -7%;"> Get Premium to enjoy add less music </marquee></p>
+    <div style="text-align: center; color: aliceblue; font-size: 28px;">
+    <a href="premium.html">Get Premium Now</a></div><br>
+    <h1 style="font-style:normal; margin-left: 6%; margin-bottom: 0%; font-size: 200%;">Recenty Played</h1>
+    <a href="likedsongs.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWrQWwwSrkZoaeYVyDAforF9e644BugO3bKZl7-vhn2Q&s.jpg" alt="liked songs" width="270px" height="260px" ></a>
+    
+    <a href="OG.html"><img src="OG.png" alt="playlist" width="270px" heigth="200px"></a>
+    
+    <a href="anirudh.html"><img src="anirudh.png" alt="anirudh" width="270px"; height="270px"></a>
+     
+    <a href="thaman.html"><img src="thaman.png" alt="thaman" width="270px"; height="270px"></a>
+    <br>
+    <pre><p style="font-size: 200%;">        Liked songs               OG Playlist           Anirudh Playlist        Thaman Playlist</p></pre><br>
+    <h1 style="font-style:normal; margin-left: 5%; font-size: 200%;">Recommended For Today</h1>
+    <a href="singari.png"><img src="singari.png" alt="singari" style="margin-top: 0%"; width="270px"; height="250px"></a>
+    <a href="jersey.png"><img src="jersey.png" alt="jersey" width="270px"; height="250px"></a>
+    <a href="darling.png"><img src="darling.png" alt="darling" width="270px"; height="250px"></a>
+    <a href="inthalo.png"><img src="inthalo.png" alt="inthalo" width="270px"; height="250px"></a>
+    <pre><p style="font-size: 150%;">          Singari(Dude)                 Adhento Gani Vunnpaatu Ga                Darling                 Inthalo Enni Enni Vinthalo</p></pre>
+
+
+   <marquee style=" background-color:darkgreen; margin-top: 50px; color: white; font-size: 30px;">get spotify premium to enjoy the music without adds</marquee>
+  
+  </body>
+  <script>
+const images = document.querySelectorAll("img");
+
+images.forEach(img=>{
+    img.addEventListener("click", ()=>{
+        alert("Opening Playlist 🎵");
+    });
+});
+
+let songs = localStorage.getItem("songs");
+if(songs){
+let list = songs.split(",");
+let ul = document.getElementById("liked");
+list.forEach(function(song){
+if(song!=""){
+let li = document.createElement("li");
+li.innerText = song;
+ul.appendChild(li);
+}
+});
+}
+</script>
+</html>

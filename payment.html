@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment</title>
+    <style>
+        body{
+            background-color: black;
+            color: white; 
+            font-size: 25px;
+        }
+        .payment-box{
+            text-align: center;
+        }
+        .btn{
+            background-color: green;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-box">
+     <h1><u>payment</u></h1>
+     <p>pay 199 rupees to activate spotify premium</p>
+     <p><b>UPI ID:</b> spotify@upi</p>
+    <p><b>Name:</b> Spotify Music</p>
+    <p><b>Amount:</b> ₹199</p>
+    <h2 style="color:green;"><u>Scan & Pay</u></h2>
+    <img src="Scanner.jpeg" alt="QR Code" width="250px" height="250px"><br>
+    <button class="btn" onclick="paymentDone()">Payment Done</button><br>
+    <a href="Homepage.html"<p style="font-size: 25px;"><--back to home</p></a>
+    </div>
+    <script>
+function paymentDone(){
+    alert("Payment Successful! Premium Activated 🎵");
+}
+</script>
+    </body>
+</html>
